@@ -1,8 +1,13 @@
+GIT
+  remote: git://github.com/intridea/hashie.git
+  revision: 80a8f11a7833bcfede7245ab78e9c05d49f99ed7
+  specs:
+    hashie (2.1.2)
+
 PATH
   remote: .
   specs:
     hashie_rails (0.0.1)
-      hashie (~> 2.1)
       rails (~> 4.0)
 
 GEM
@@ -37,7 +42,6 @@ GEM
     arel (5.0.1.20140414130214)
     builder (3.2.2)
     erubis (2.7.0)
-    hashie (2.1.1)
     hike (1.2.3)
     i18n (0.6.9)
     json (1.8.1)
@@ -90,5 +94,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  hashie!
   hashie_rails!
+  minitest
   sqlite3
