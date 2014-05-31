@@ -28,5 +28,12 @@ Rake::TestTask.new(:test) do |t|
   t.verbose = false
 end
 
+task :migrate_db do
+  Dir.chdir('test/dummy') do
+    `bundle exec rake db:migrate db:test:prepare`
+  end
+end
+
+task test: :migrate_db
 
 task default: :test
