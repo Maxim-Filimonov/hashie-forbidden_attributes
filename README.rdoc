@@ -1,3 +1,5 @@
 = HashieRails
 
+{<img src="https://travis-ci.org/Maxim-Filimonov/hashie_rails.svg" alt="Build Status" />}[https://travis-ci.org/Maxim-Filimonov/hashie_rails]
+
 This project rocks and uses MIT-LICENSE.
