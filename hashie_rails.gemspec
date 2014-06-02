@@ -21,7 +21,13 @@ Gem::Specification.new do |s|
   # Need to wait for hashie to release new version
   #s.add_dependency "hashie", "~> 2.1"
 
-  s.add_development_dependency "sqlite3"
+  if RUBY_PLATFORM != 'java'
+    s.add_development_dependency 'sqlite3'
+  else
+    s.add_development_dependency 'jdbc-sqlite3'
+    s.add_development_dependency 'activerecord-jdbcsqlite3-adapter'
+  end
+
   s.add_development_dependency "minitest"
   s.add_development_dependency "grape"
 end
