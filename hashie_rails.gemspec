@@ -16,8 +16,7 @@ Gem::Specification.new do |s|
   s.test_files = Dir['test/**/*']
 
   s.add_dependency 'rails', '~> 4.0'
-  # Need to wait for hashie to release new version
-  # s.add_dependency "hashie", ">= 3.0"
+  s.add_dependency 'hashie', '>= 3.0'
 
   if RUBY_PLATFORM != 'java'
     s.add_development_dependency 'sqlite3'
