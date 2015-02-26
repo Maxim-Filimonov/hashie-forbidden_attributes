@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
   s.files = Dir['{app,config,db,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.rdoc']
   s.test_files = Dir['test/**/*']
 
-  s.add_dependency 'rails', '~> 4.0'
+  s.add_dependency 'activesupport', '~> 4.0'
   s.add_dependency 'hashie', '>= 3.0'
 
   if RUBY_PLATFORM != 'java'
@@ -26,5 +26,6 @@ Gem::Specification.new do |s|
   end
 
   s.add_development_dependency 'minitest'
+  s.add_development_dependency 'rails', '~> 4.0'
   s.add_development_dependency 'grape'
 end
