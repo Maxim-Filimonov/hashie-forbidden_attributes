@@ -1,7 +1,7 @@
 require 'test_helper'
-require 'hashie_rails'
+require 'hashie_forbidden_attributes'
 
-class HashieRailsTest < ActiveSupport::TestCase
+class HashieForbiddenAttributesTest < ActiveSupport::TestCase
   def setup
     @mash = Hashie::Mash.new
   end

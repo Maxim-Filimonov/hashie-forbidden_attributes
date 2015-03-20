@@ -3,7 +3,7 @@ require File.expand_path('../boot', __FILE__)
 require 'rails/all'
 
 Bundler.require(*Rails.groups)
-require 'hashie_rails'
+require 'hashie_forbidden_attributes'
 
 module Dummy
   class Application < Rails::Application

@@ -1,15 +1,15 @@
 $LOAD_PATH.push File.expand_path('../lib', __FILE__)
 
-require 'hashie_rails/version'
+require 'hashie-forbidden_attributes/version'
 
 Gem::Specification.new do |s|
-  s.name        = 'hashie_rails'
-  s.version     = HashieRails::VERSION
-  s.authors     = ['Maxim-Filimonov']
+  s.name        = 'hashie-forbidden_attributes'
+  s.version     = HashieForbiddenAttributes::VERSION
+  s.authors     = ['Maxim-Filimonov', 'Daniel Doubrovkine']
   s.email       = ['tpaktopsp@gmail.com']
-  s.homepage    = 'https://github.com/Maxim-Filimonov/hashie_rails'
-  s.summary     = 'Automatic strong parameter detection with Hashie and Rails 4.'
-  s.description = 'Automatic strong parameter detection with Hashie and Rails 4.'
+  s.homepage    = 'https://github.com/Maxim-Filimonov/hashie-forbidden_attributes'
+  s.summary     = 'Automatic strong parameter detection with Hashie and Forbidden Attributes'
+  s.description = 'Automatic strong parameter detection with Hashie and Forbidden Attributes.'
   s.license     = 'MIT'
 
   s.files = Dir['{app,config,db,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.rdoc']
