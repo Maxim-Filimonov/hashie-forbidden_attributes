@@ -1,6 +1,12 @@
-### 0.0.3 (Next)
+### 0.1.1 (Next)
 
-* Your contribution here.
+### 0.1.0
+
+* Renamed from HashieRails to HashieForbiddenAttributes
+
+### 0.0.3
+
+* Changed dependency to active support only
 
 ### 0.0.2 (2/27/2015)
 

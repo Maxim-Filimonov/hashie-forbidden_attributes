@@ -1,16 +1,16 @@
-Contributing to Hashie_Rails
+Contributing to HashieForbiddenAttributes
 ============================
 
-Hashie_Rails is work of [many of contributors](https://github.com/Maxim-Filimonov/hashie_rails/graphs/contributors). You're encouraged to submit [pull requests](https://github.com/Maxim-Filimonov/hashie_rails/pulls), [propose features and discuss issues](https://github.com/Maxim-Filimonov/hashie_rails/issues).
+HashieForbiddenAttributes is work of [many of contributors](https://github.com/Maxim-Filimonov/hashie-forbidden_attributes/graphs/contributors). You're encouraged to submit [pull requests](https://github.com/Maxim-Filimonov/hashie-forbidden_attributes/pulls), [propose features and discuss issues](https://github.com/Maxim-Filimonov/hashie-forbidden_attributes/issues).
 
 #### Fork the Project
 
-Fork the [project on Github](https://github.com/Maxim-Filimonov/hashie_rails) and check out your copy.
+Fork the [project on Github](https://github.com/Maxim-Filimonov/hashie-forbidden_attributes) and check out your copy.
 
 ```
-git clone https://github.com/contributor/hashie_rails.git
+git clone https://github.com/contributor/hashie-forbidden_attributes.git
 cd hashie_rails
-git remote add upstream https://github.com/Maxim-Filimonov/hashie_rails.git
+git remote add upstream https://github.com/Maxim-Filimonov/hashie-forbidden_attributes.git
 ```
 
 #### Create a Topic Branch
