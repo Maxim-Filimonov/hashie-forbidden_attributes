@@ -1,4 +1,4 @@
-# HashieRails
+# HashieForbiddenAttributes
 
 [![Build Status](https://secure.travis-ci.org/Maxim-Filimonov/hashie-forbidden_attributes.png)](http://travis-ci.org/Maxim-Filimonov/hashie-forbidden_attributes)
 
