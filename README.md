@@ -1,6 +1,7 @@
 # HashieForbiddenAttributes
 
 [![Build Status](https://secure.travis-ci.org/Maxim-Filimonov/hashie-forbidden_attributes.png)](http://travis-ci.org/Maxim-Filimonov/hashie-forbidden_attributes)
+[![Gem Version](https://badge.fury.io/rb/hashie-forbidden_attributes.svg)](http://badge.fury.io/rb/hashie-forbidden_attributes)
 
 ## ForbiddenAttributesProtection
 If you're using [Rails 4 strong parameters](http://edgeguides.rubyonrails.org/action_controller_overview.html#strong-parameters), you will get a [ForbiddenAttributesProtection](https://github.com/rails/strong_parameters/blob/master/lib/active_model/forbidden_attributes_protection.rb) exceptions when mass-assigning attributes.
