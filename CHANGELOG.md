@@ -1,12 +1,14 @@
-### 0.1.1 (Next)
+### 0.1.2 (Next)
 
-### 0.1.0
+* Your contribution here.
 
-* Renamed from HashieRails to HashieForbiddenAttributes
+### 0.1.1
+
+* Renamed from HashieRails to HashieForbiddenAttributes - [@Maxim-Filimonov](https://github.com/Maxim-Filimonov), [@dblock](https://github.com/dblock).
 
 ### 0.0.3
 
-* Changed dependency to active support only
+* [#5](https://github.com/Maxim-Filimonov/hashie_rails/pull/5): Changed dependency to ActiveSupport only - [@Maxim-Filimonov](https://github.com/Maxim-Filimonov).
 
 ### 0.0.2 (2/27/2015)
 

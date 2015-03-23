@@ -1,5 +1,4 @@
 require 'test_helper'
-require 'hashie_forbidden_attributes'
 
 class HashieForbiddenAttributesTest < ActiveSupport::TestCase
   def setup
