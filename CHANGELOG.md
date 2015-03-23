@@ -1,7 +1,3 @@
-### 0.1.2 (Next)
-
-* Your contribution here.
-
 ### 0.1.1
 
 * Renamed from HashieRails to HashieForbiddenAttributes - [@Maxim-Filimonov](https://github.com/Maxim-Filimonov), [@dblock](https://github.com/dblock).
