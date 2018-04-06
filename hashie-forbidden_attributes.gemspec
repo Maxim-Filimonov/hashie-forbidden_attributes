@@ -1,4 +1,4 @@
-$LOAD_PATH.push File.expand_path('../lib', __FILE__)
+$LOAD_PATH.push File.expand_path('lib', __dir__)
 
 require 'hashie-forbidden_attributes/version'
 
@@ -20,11 +20,10 @@ Gem::Specification.new do |s|
   if RUBY_PLATFORM != 'java'
     s.add_development_dependency 'sqlite3'
   else
-    s.add_development_dependency 'jdbc-sqlite3'
     s.add_development_dependency 'activerecord-jdbcsqlite3-adapter'
+    s.add_development_dependency 'jdbc-sqlite3'
   end
-
+  s.add_development_dependency 'grape'
   s.add_development_dependency 'minitest'
   s.add_development_dependency 'rails', '~> 4.0'
-  s.add_development_dependency 'grape'
 end
