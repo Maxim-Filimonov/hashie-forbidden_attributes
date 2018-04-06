@@ -26,4 +26,4 @@ end
 
 task test: :migrate_db
 
-task default: %i[rubocop test]
+task default: %i(rubocop test)
