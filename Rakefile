@@ -16,7 +16,7 @@ Rake::TestTask.new(:test) do |t|
 end
 
 require 'rubocop/rake_task'
-Rubocop::RakeTask.new(:rubocop)
+RuboCop::RakeTask.new(:rubocop)
 
 task :migrate_db do
   Dir.chdir('test/dummy') do
@@ -26,4 +26,4 @@ end
 
 task test: :migrate_db
 
-task default: [:rubocop, :test]
+task default: %i(rubocop test)
