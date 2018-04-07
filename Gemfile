@@ -1,5 +1,5 @@
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
 gemspec
 
-gem 'rubocop', '0.22.0'
+gem 'rubocop', '0.54.0'

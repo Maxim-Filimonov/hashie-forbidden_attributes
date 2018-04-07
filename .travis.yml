@@ -1,19 +1,21 @@
 language: ruby
 
+sudo: false
+
 cache: bundler
 
 rvm:
+  - 2.5.0
+  - 2.4.3
+  - 2.3.6
+  - 2.2.9
+  - 2.1.10
   - ruby-head
-  - 2.1.7
-  - 2.0.0
-  - 1.9.3
-  - jruby-19mode
   - jruby-head
-  - rbx-2
+  - rbx-3
 
 matrix:
   allow_failures:
     - rvm: ruby-head
     - rvm: jruby-head
-
-sudo: false
+    - rvm: rbx-3
