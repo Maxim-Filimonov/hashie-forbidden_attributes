@@ -1,6 +1,6 @@
 # HashieForbiddenAttributes
 
-[![Build Status](https://secure.travis-ci.org/Maxim-Filimonov/hashie-forbidden_attributes.png)](http://travis-ci.org/Maxim-Filimonov/hashie-forbidden_attributes)
+[![Build Status](https://travis-ci.org/Maxim-Filimonov/hashie-forbidden_attributes.svg?branch=master)](https://travis-ci.org/Maxim-Filimonov/hashie-forbidden_attributes)
 [![Gem Version](https://badge.fury.io/rb/hashie-forbidden_attributes.svg)](http://badge.fury.io/rb/hashie-forbidden_attributes)
 
 ## ForbiddenAttributesProtection

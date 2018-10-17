@@ -9,7 +9,7 @@ Fork the [project on Github](https://github.com/Maxim-Filimonov/hashie-forbidden
 
 ```
 git clone https://github.com/contributor/hashie-forbidden_attributes.git
-cd hashie_rails
+cd hashie-forbidden_attributes
 git remote add upstream https://github.com/Maxim-Filimonov/hashie-forbidden_attributes.git
 ```
 
@@ -78,7 +78,7 @@ git push origin my-feature-branch
 
 #### Make a Pull Request
 
-Go to https://github.com/contributor/hashie_rails and select your feature branch. Click the 'Pull Request' button and fill out the form. Pull requests are usually reviewed within a few days.
+Go to https://github.com/contributor/hashie-forbidden_attributes and select your feature branch. Click the 'Pull Request' button and fill out the form. Pull requests are usually reviewed within a few days.
 
 #### Rebase
 
@@ -95,7 +95,7 @@ git push origin my-feature-branch -f
 Update the [CHANGELOG](CHANGELOG.md) with the pull request number. A typical entry looks as follows.
 
 ```
-* [#123](https://github.com/Maxim-Filimonov/hashie_rails/pull/123): Reticulated splines - [@contributor](https://github.com/contributor).
+* [#123](https://github.com/Maxim-Filimonov/hashie-forbidden_attributes/pull/123): Reticulated splines - [@contributor](https://github.com/contributor).
 ```
 
 Amend your previous commit and force push the changes.
