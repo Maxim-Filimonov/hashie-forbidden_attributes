@@ -10,8 +10,7 @@ Gem::Specification.new do |s|
   s.description = 'Automatic strong parameter detection with Hashie and Forbidden Attributes. Formerly known as hashie_rails'
   s.license     = 'MIT'
 
-  s.files = Dir['{app,config,db,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.rdoc']
-  s.test_files = Dir['test/**/*']
+  s.files = Dir['{app,config,db,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.md']
 
   s.add_dependency 'hashie', '>= 3.0'
 end

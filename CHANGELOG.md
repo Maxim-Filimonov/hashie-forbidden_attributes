@@ -5,6 +5,7 @@
 * [#13](https://github.com/Maxim-Filimonov/hashie-forbidden_attributes/pull/13): Upgraded RuboCop, lint Markdown, YAML, and spelling with rubocop-md, rubocop-prose, rubocop-spellcheck, and rubocop-yaml in a separate Lint workflow, and cleaned up documentation - [@dblock](https://github.com/dblock).
 * [#14](https://github.com/Maxim-Filimonov/hashie-forbidden_attributes/pull/14): Run CI pushes only on the default branch, cancel superseded pull request runs, and bound job times - [@dblock](https://github.com/dblock).
 * [#17](https://github.com/Maxim-Filimonov/hashie-forbidden_attributes/pull/17): Release with ruby-gem-release through a manually dispatched GitHub Actions workflow and RubyGems Trusted Publishing - [@dblock](https://github.com/dblock).
+* [#18](https://github.com/Maxim-Filimonov/hashie-forbidden_attributes/pull/18): Include README.md in the gem, which listed a nonexistent README.rdoc, and stop packaging the test directory, which picked up local test databases, logs, and secrets - [@dblock](https://github.com/dblock).
 * Your contribution here.
 
 ### 0.1.1
