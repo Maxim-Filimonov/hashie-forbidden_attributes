@@ -1,0 +1,32 @@
+name: Test
+
+on: [push, pull_request]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Ruby ${{ matrix.entry.ruby }} / Rails ${{ matrix.entry.rails }} / Hashie ${{ matrix.entry.hashie }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        entry:
+          - { ruby: '2.7', rails: '6.1', hashie: '3' }
+          - { ruby: '3.2', rails: '7.2', hashie: '4' }
+          - { ruby: '3.4', rails: '8.0', hashie: '5' }
+          - { ruby: '4.0', rails: '8.1', hashie: '6' }
+    env:
+      RAILS_VERSION: ${{ matrix.entry.rails }}
+      HASHIE_VERSION: ${{ matrix.entry.hashie }}
+    steps:
+      - name: Check Out Code
+        uses: actions/checkout@v7
+      - name: Set Up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.entry.ruby }}
+          bundler-cache: true
+      - name: Run Tests
+        run: bundle exec rake test

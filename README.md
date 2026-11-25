@@ -1,6 +1,6 @@
 # HashieForbiddenAttributes
 
-[![Build Status](https://travis-ci.org/Maxim-Filimonov/hashie-forbidden_attributes.svg?branch=master)](https://travis-ci.org/Maxim-Filimonov/hashie-forbidden_attributes)
+[![Test](https://github.com/Maxim-Filimonov/hashie-forbidden_attributes/actions/workflows/test.yml/badge.svg?branch=master)](https://github.com/Maxim-Filimonov/hashie-forbidden_attributes/actions/workflows/test.yml?query=branch%3Amaster)
 [![Gem Version](https://badge.fury.io/rb/hashie-forbidden_attributes.svg)](http://badge.fury.io/rb/hashie-forbidden_attributes)
 
 ## ForbiddenAttributesProtection
