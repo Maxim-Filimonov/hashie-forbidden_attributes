@@ -16,15 +16,4 @@ Gem::Specification.new do |s|
   s.test_files = Dir['test/**/*']
 
   s.add_dependency 'hashie', '>= 3.0'
-
-  if RUBY_PLATFORM != 'java'
-    s.add_development_dependency 'sqlite3'
-  else
-    s.add_development_dependency 'activerecord-jdbcsqlite3-adapter'
-    s.add_development_dependency 'jdbc-sqlite3'
-  end
-
-  s.add_development_dependency 'grape'
-  s.add_development_dependency 'minitest'
-  s.add_development_dependency 'rails', '~> 4.0'
 end

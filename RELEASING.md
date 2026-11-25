@@ -12,7 +12,7 @@ bundle install
 rake
 ```
 
-Check that the last build succeeded in [Travis CI](https://travis-ci.org/Maxim-Filimonov/hashie-forbidden_attributes) for all supported platforms.
+Check that the last build succeeded in [GitHub Actions](https://github.com/Maxim-Filimonov/hashie-forbidden_attributes/actions) for all supported platforms.
 
 Increment the version, modify [lib/hashie-forbidden_attributes/version.rb](lib/hashie-forbidden_attributes/version.rb).
 

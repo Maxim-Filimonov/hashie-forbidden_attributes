@@ -1,6 +1,7 @@
 ### 0.2.0 (Next)
 
 * [#9](https://github.com/Maxim-Filimonov/hashie-forbidden_attributes/pull/9): Dropped support for Ruby < 2.1 - [@dblock](https://github.com/dblock).
+* [#12](https://github.com/Maxim-Filimonov/hashie-forbidden_attributes/pull/12): Replaced Travis CI with GitHub Actions, test with Rails 6.1 through 8.1 and Hashie 3 through 6 on Ruby 2.7 through 4.0 - [@dblock](https://github.com/dblock).
 * Your contribution here.
 
 ### 0.1.1
