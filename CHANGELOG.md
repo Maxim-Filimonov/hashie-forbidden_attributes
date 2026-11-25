@@ -1,4 +1,4 @@
-### 0.2.0 (Next)
+### 0.2.0 (2026/11/25)
 
 * [#9](https://github.com/Maxim-Filimonov/hashie-forbidden_attributes/pull/9): Dropped support for Ruby < 2.1 - [@dblock](https://github.com/dblock).
 * [#12](https://github.com/Maxim-Filimonov/hashie-forbidden_attributes/pull/12): Replaced Travis CI with GitHub Actions, test with Rails 6.1 through 8.1 and Hashie 3 through 6 on Ruby 2.7 through 4.0 - [@dblock](https://github.com/dblock).
@@ -6,7 +6,6 @@
 * [#14](https://github.com/Maxim-Filimonov/hashie-forbidden_attributes/pull/14): Run CI pushes only on the default branch, cancel superseded pull request runs, and bound job times - [@dblock](https://github.com/dblock).
 * [#17](https://github.com/Maxim-Filimonov/hashie-forbidden_attributes/pull/17): Release with ruby-gem-release through a manually dispatched GitHub Actions workflow and RubyGems Trusted Publishing - [@dblock](https://github.com/dblock).
 * [#18](https://github.com/Maxim-Filimonov/hashie-forbidden_attributes/pull/18): Include README.md in the gem, which listed a nonexistent README.rdoc, and stop packaging the test directory, which picked up local test databases, logs, and secrets - [@dblock](https://github.com/dblock).
-* Your contribution here.
 
 ### 0.1.1
 
