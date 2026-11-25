@@ -1,66 +1,39 @@
 # Releasing HashieForbiddenAttributes
 
-There are no particular rules about when to release hashie-forbidden_attributes. Release bug fixes frequently, features not so frequently and breaking API changes rarely.
+There are no particular rules about when to release hashie-forbidden_attributes. Release bug fixes frequently, features not so frequently, and breaking API changes rarely.
 
-## Release
+Releases use [ruby-gem-release](https://github.com/dblock/ruby-gem-release) 0.9.0 through a manually dispatched [Release workflow](.github/workflows/release.yml). Keep the `ruby-gem-release` gem in [Gemfile](Gemfile) and the reusable workflow in `release.yml` pinned to the same version. The workflow publishes through RubyGems Trusted Publishing, so no RubyGems API key or one-time password is needed. It only runs from `master` in `Maxim-Filimonov/hashie-forbidden_attributes`. The local Bundler `rake release`, `release:rubygem_push`, and `release:source_control_push` tasks are disabled.
 
-Run tests, check that all tests succeed locally.
+## One-Time Setup
 
-```sh
-bundle install
-rake
-```
+Before the first automated release, a maintainer must:
 
-Check that the last build succeeded in [GitHub Actions](https://github.com/Maxim-Filimonov/hashie-forbidden_attributes/actions) for all supported platforms.
+1. Create the GitHub environment `release` in `Maxim-Filimonov/hashie-forbidden_attributes`, for example with `gh api --method PUT repos/Maxim-Filimonov/hashie-forbidden_attributes/environments/release`, and restrict its deployment branches to `master`. Add required reviewers to require maintainer approval before publication.
+2. At [hashie-forbidden_attributes's trusted publishers](https://rubygems.org/gems/hashie-forbidden_attributes/trusted_publishers), add a GitHub Actions publisher with repository owner `Maxim-Filimonov`, repository `hashie-forbidden_attributes`, workflow filename `release.yml`, environment `release`, and the separate workflow repository owner `dblock` and repository `ruby-gem-release`.
+3. Allow GitHub Actions to push release commits and `v*` tags to `master`. See the upstream [setup and permissions guidance](https://github.com/dblock/ruby-gem-release/blob/v0.9.0/RELEASING.md#one-time-setup).
 
-Increment the version, modify [lib/hashie-forbidden_attributes/version.rb](lib/hashie-forbidden_attributes/version.rb).
-
-* Increment the third number if the release has bug fixes and/or very minor features, only (e.g. change `0.5.1` to `0.5.2`).
-* Increment the second number if the release contains major features or breaking API changes (e.g. change `0.5.1` to `0.6.0`).
-
-Change "Next" in [CHANGELOG.md](CHANGELOG.md) to the new version.
-
-```markdown
-### 0.4.0 (2014/01/27)
-```
-
-Remove the line with "Your contribution here.", since there will be no more contributions to this release.
-
-Commit your changes.
+Verify the setup without publishing with a [dry run](https://github.com/dblock/ruby-gem-release/blob/v0.9.0/docs/actions/release.md#dry-run), which never edits files, builds, pushes, or publishes:
 
 ```sh
-git add CHANGELOG.md lib/hashie-forbidden_attributes/version.rb
-git commit -m "Preparing for release, 0.4.0."
-git push origin master
+gh workflow run release.yml --repo Maxim-Filimonov/hashie-forbidden_attributes --ref master -f dry-run=true
 ```
 
-Release.
+## Prepare
 
-```text
-$ rake release
+Start with a clean, up-to-date `master` and verify that the latest [CI checks](https://github.com/Maxim-Filimonov/hashie-forbidden_attributes/actions) pass on all supported Ruby, Rails, and Hashie versions. Follow semantic versioning: patch for fixes, minor for backward-compatible features, major for breaking changes. Check `VERSION` in [lib/hashie-forbidden_attributes/version.rb](lib/hashie-forbidden_attributes/version.rb) and the matching `(Next)` heading in [CHANGELOG.md](CHANGELOG.md), and change both in a pull request if needed, or pass a `version` override when dispatching.
 
-hashie-forbidden_attributes 0.4.0 built to pkg/hashie-forbidden_attributes-0.4.0.gem.
-Tagged v0.4.0.
-Pushed git commits and tags.
-Pushed hashie-forbidden_attributes 0.4.0 to rubygems.org.
-```
+The workflow dates the `(Next)` heading using `YYYY/MM/DD` and removes the `* Your contribution here.` placeholder; a section without notes cannot be released.
 
-## Prepare for the Next Version
+Release automation requires MRI Ruby 3.3 or newer; the release dependency and tasks are skipped on older Ruby versions. The [release test](test/release/release_test.rb) runs the actual release tasks against a local fixture with the [ruby-gem-release test helpers](https://github.com/dblock/ruby-gem-release/blob/v0.9.0/docs/testing.md), without contacting RubyGems or GitHub.
 
-Add the next release to [CHANGELOG.md](CHANGELOG.md).
-
-```markdown
-### 0.4.1 (Next)
-
-* Your contribution here.
-```
-
-Increment the minor version, modify [lib/hashie-forbidden_attributes/version.rb](lib/hashie-forbidden_attributes/version.rb).
-
-Commit your changes.
+## Publish
 
 ```sh
-git add CHANGELOG.md lib/hashie-forbidden_attributes/version.rb
-git commit -m "Preparing for next release, 0.4.1."
-git push origin master
+gh workflow run release.yml --repo Maxim-Filimonov/hashie-forbidden_attributes --ref master
 ```
+
+Pass `-f version=x.y.z` to release a different version. Dispatching starts a real release; do not merge into `master` while it runs. The workflow prepares the release commit, runs lint and tests on Ruby 3.3, builds the gem, preserves recovery artifacts, publishes to RubyGems, pushes the release commit and `v` tag, and creates a GitHub Release with the changelog notes and the gem attached. It then increments the patch version, adds a new `(Next)` section, and pushes the next development commit. Verify the published version on [RubyGems](https://rubygems.org/gems/hashie-forbidden_attributes), the tag, the [GitHub Release](https://github.com/Maxim-Filimonov/hashie-forbidden_attributes/releases), and the next development commit.
+
+## Recover a Partial Release
+
+Inspect the failed run, RubyGems, remote commits and tags, and the GitHub Release before retrying. Publication may have succeeded even if a later step failed. Never move a published tag or republish a version with different contents. Use the run's retained recovery artifacts and the upstream [recovery instructions](https://github.com/dblock/ruby-gem-release/blob/v0.9.0/docs/actions/release.md#recovery-artifacts).

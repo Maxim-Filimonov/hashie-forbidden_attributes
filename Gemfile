@@ -19,4 +19,7 @@ if RUBY_ENGINE == 'ruby' && Gem::Version.new(RUBY_VERSION) >= Gem::Version.new('
   gem 'rubocop-rake', '~> 0.7', require: false
   gem 'rubocop-spellcheck', '~> 0.2', require: false
   gem 'rubocop-yaml', '~> 0.1.0', require: false
+
+  gem 'commonmarker', '~> 2.10', require: false
+  gem 'ruby-gem-release', '0.9.0', require: false
 end

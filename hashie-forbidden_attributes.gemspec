@@ -1,6 +1,4 @@
-$LOAD_PATH.push File.expand_path('lib', __dir__)
-
-require 'hashie-forbidden_attributes/version'
+require_relative 'lib/hashie-forbidden_attributes/version'
 
 Gem::Specification.new do |s|
   s.name        = 'hashie-forbidden_attributes'
