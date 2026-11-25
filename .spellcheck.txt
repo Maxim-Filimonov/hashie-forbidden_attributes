@@ -8,9 +8,12 @@ Doubrovkine
 dylanfareed
 Filimonov
 ForbiddenAttributesProtection
+Gemfile
+gemspec
 hashie
 Hashie
 HashieForbiddenAttributes
+HashieForbiddenAttributesRelease
 HashieRails
 md
 nitpicky
@@ -22,4 +25,5 @@ rebase
 Rebase
 rubocop
 RuboCop
+RubyGems
 YAML
