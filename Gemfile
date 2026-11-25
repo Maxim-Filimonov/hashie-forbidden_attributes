@@ -10,5 +10,13 @@ gem 'hashie', "~> #{hashie_version}.0" if hashie_version
 gem 'minitest'
 gem 'rails', rails_version ? "~> #{rails_version}.0" : '>= 6.1'
 gem 'rake'
-gem 'rubocop', '0.54.0', require: false
 gem 'sqlite3'
+
+if RUBY_ENGINE == 'ruby' && Gem::Version.new(RUBY_VERSION) >= Gem::Version.new('3.3')
+  gem 'rubocop', '~> 1.92', require: false
+  gem 'rubocop-md', '~> 3.0', require: false
+  gem 'rubocop-prose', '~> 0.2', require: false
+  gem 'rubocop-rake', '~> 0.7', require: false
+  gem 'rubocop-spellcheck', '~> 0.2', require: false
+  gem 'rubocop-yaml', '~> 0.1.0', require: false
+end

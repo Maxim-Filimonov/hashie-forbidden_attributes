@@ -1,13 +1,12 @@
-Releasing HashieForbiddenAttributes
-======================
+# Releasing HashieForbiddenAttributes
 
-There're no particular rules about when to release hashie-forbidden_attributes. Release bug fixes frequenty, features not so frequently and breaking API changes rarely.
+There are no particular rules about when to release hashie-forbidden_attributes. Release bug fixes frequently, features not so frequently and breaking API changes rarely.
 
-### Release
+## Release
 
 Run tests, check that all tests succeed locally.
 
-```
+```sh
 bundle install
 rake
 ```
@@ -16,21 +15,20 @@ Check that the last build succeeded in [GitHub Actions](https://github.com/Maxim
 
 Increment the version, modify [lib/hashie-forbidden_attributes/version.rb](lib/hashie-forbidden_attributes/version.rb).
 
-*  Increment the third number if the release has bug fixes and/or very minor features, only (eg. change `0.5.1` to `0.5.2`).
-*  Increment the second number if the release contains major features or breaking API changes (eg. change `0.5.1` to `0.4.0`).
+* Increment the third number if the release has bug fixes and/or very minor features, only (e.g. change `0.5.1` to `0.5.2`).
+* Increment the second number if the release contains major features or breaking API changes (e.g. change `0.5.1` to `0.6.0`).
 
-Change "Next Release" in [CHANGELOG.md](CHANGELOG.md) to the new version.
+Change "Next" in [CHANGELOG.md](CHANGELOG.md) to the new version.
 
-```
-0.4.0 (2014-01-27)
-==================
+```markdown
+### 0.4.0 (2014/01/27)
 ```
 
 Remove the line with "Your contribution here.", since there will be no more contributions to this release.
 
 Commit your changes.
 
-```
+```sh
 git add CHANGELOG.md lib/hashie-forbidden_attributes/version.rb
 git commit -m "Preparing for release, 0.4.0."
 git push origin master
@@ -38,7 +36,7 @@ git push origin master
 
 Release.
 
-```
+```text
 $ rake release
 
 hashie-forbidden_attributes 0.4.0 built to pkg/hashie-forbidden_attributes-0.4.0.gem.
@@ -47,22 +45,21 @@ Pushed git commits and tags.
 Pushed hashie-forbidden_attributes 0.4.0 to rubygems.org.
 ```
 
-### Prepare for the Next Version
+## Prepare for the Next Version
 
 Add the next release to [CHANGELOG.md](CHANGELOG.md).
 
-```
-Next Release
-============
+```markdown
+### 0.4.1 (Next)
 
 * Your contribution here.
 ```
 
 Increment the minor version, modify [lib/hashie-forbidden_attributes/version.rb](lib/hashie-forbidden_attributes/version.rb).
 
-Comit your changes.
+Commit your changes.
 
-```
+```sh
 git add CHANGELOG.md lib/hashie-forbidden_attributes/version.rb
 git commit -m "Preparing for next release, 0.4.1."
 git push origin master
