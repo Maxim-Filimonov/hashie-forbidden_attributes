@@ -1,3 +1,7 @@
+### 0.2.1 (Next)
+
+* Your contribution here.
+
 ### 0.2.0 (2026/11/25)
 
 * [#9](https://github.com/Maxim-Filimonov/hashie-forbidden_attributes/pull/9): Dropped support for Ruby < 2.1 - [@dblock](https://github.com/dblock).
